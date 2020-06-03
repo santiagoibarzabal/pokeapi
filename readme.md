@@ -8,7 +8,7 @@ Este proyecto consiste en un buscador de pokemones por nombre parcial o completo
 
 ## Instalacion
 
-```git clone https://github.com/santiagoibarzabal```
+```https://github.com/santiagoibarzabal/pokeapi.git```
 
 - Clonar el proyecto con el comando indicado.
 - Dirigirse a la carpeta del proyecto
