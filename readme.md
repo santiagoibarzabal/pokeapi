@@ -10,11 +10,18 @@ Este proyecto consiste en un buscador de pokemones por nombre parcial o completo
 
 ```git clone https://github.com/santiagoibarzabal```
 
-## Utilización
-
-- Clonar el proyecto con el comando indicado en "Instalacion" 
+- Clonar el proyecto con el comando indicado.
 - Dirigirse a la carpeta del proyecto
+
+Si es necesario:
+
 - Instalar las dependencias del proyecto con el comando composer install
 - Hacer una copia del archivo .env.example creando un archivo .env propio
 - Ejecutar el comando php artisan key:generate
-- Listo! 
+
+## Utilización
+
+- http://localhost:8000
+
+Muchas gracias! 
+
