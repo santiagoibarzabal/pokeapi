@@ -1,0 +1,24 @@
+* {
+  font-family: Lato, sans-serif;
+}
+  
+html {
+    min-height: 95%;
+    position: relative;
+  }
+body {
+    margin: 0;
+    margin-bottom: 60px;
+    background-color: rgba(0,0,0,.01);
+  }
+footer {
+    position: absolute;
+      bottom: 0;
+    width:66%;
+    height: 50px;
+  }
+
+img:hover {
+  opacity:.7;
+  filter: grayscale(1);
+}
