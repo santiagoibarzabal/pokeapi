@@ -52,7 +52,7 @@
                     Hecho por Santiago Ibarzabal
                 </div>
                 <div class="col-4 my-4">
-                    <a href="https://github.com/santiagoibarzabal" class="btn btn-success">
+                    <a href="https://github.com/santiagoibarzabal/pokeapi" class="btn btn-success">
                         Link a mi repositorio
                     </a>
                 </div>
