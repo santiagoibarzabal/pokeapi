@@ -21,7 +21,9 @@ Si es necesario:
 
 ## Utilización
 
-- http://localhost:8000
+- Ejecutar el comando php artisan serve dentro de la carpeta del proyecto
+- Acceder desde http://localhost:8000
+
 
 Muchas gracias! 
 
