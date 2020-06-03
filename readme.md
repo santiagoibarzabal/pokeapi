@@ -1,18 +1,15 @@
 # Buscador de Pokemones - Pokeapi
 
-Este proyecto tiene como
-
-
+Este proyecto consiste en un buscador de pokemones por nombre parcial o completo utilizando la Pokeapi como fuente de datos. 
 
 ## Autor
 
 ###### Santiago Ibarzabal
 
-Me considero una diseñadora multimedial todoterreno. Me encanta estar siempre aprendiendo cosas nuevas. Tengo insomnio nivel emprendedor desde tiempos inmemorables. Amo involucrarme en nuevos proyectos. Detallista al mango.
-
 ## Instalacion
 
 ```git clone https://github.com/santiagoibarzabal```
 
+## Utilización
 
 
