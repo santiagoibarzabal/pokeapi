@@ -1,6 +1,6 @@
 # Buscador de Pokemones - Pokeapi
 
-Este proyecto consiste en un buscador de pokemones por nombre parcial o completo utilizando la Pokeapi como fuente de datos. 
+Este proyecto consiste en un buscador de pokemones por nombre parcial o completo utilizando la Pokeapi (https://pokeapi.co/) como fuente de datos. 
 
 ## Autor
 
