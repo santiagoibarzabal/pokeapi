@@ -13,3 +13,4 @@
 
 Route::get('/', 'PokeController@index');
 Route::get('/find', 'PokeController@findPokemon');
+Route::get('/{name}', 'PokeController@show');

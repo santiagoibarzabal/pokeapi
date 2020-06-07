@@ -16,4 +16,13 @@ class Result
           }
           return $somePoke;
     }
+
+    public function getOnePoke($name){
+        $onePoke = [];
+        $url = "https://pokeapi.co/api/v2/pokemon/" . $name;
+        $pokeData = Curl::to($url)->get();
+        $pokeJsonToArray = json_decode($pokeData,true);
+        array_push($onePoke, $pokeJsonToArray);
+        return $onePoke;
+    }
 }

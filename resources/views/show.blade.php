@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="row">
-            <form id="form" class="col-12" action="">
+            <form id="form" class="col-12" action="/find">
                 <div class="row">
                     <div class="col-7">
                         <input type="text" id="query" name="query" class="form-control m-1 @error('query') is-invalid @enderror" placeholder="Ingresá el nombre del pokemon que buscás">
@@ -48,24 +48,53 @@
              
         </div>
         <div class="row">
-            <h4 class="col-12 mt-4">Resultados de la búsqueda</h4>
+            <h4 class="col-12 mt-4 text-center">{{ucwords(str_replace('-', ' ',$pokemon[0]["name"]))}}</h4>
         </div>
 
         <div class="row justify-content-start">
-        @forelse($somePoke as $pokemon)
-            <div class="col-2 my-4 mx-1 p-1 text-center">
-                <h5 class="text-center">{{ucwords(str_replace('-', ' ',$pokemon["name"]))}}</h5>
-                @if(isset($pokemon["sprites"]["front_default"]))
-                <img class="col-10 p-0 border bg-white" src="{{$pokemon["sprites"]["front_default"]}}" alt="Imagen de {{$pokemon["name"]}}">
+            <div class="col-4 my-4 mx-1 p-1 text-center">
+                {{-- <h5 class="text-center">{{ucwords(str_replace('-', ' ',$pokemon[0]["name"]))}}</h5> --}}
+                @if(isset($pokemon[0]["sprites"]["front_default"]))
+                <img class="col-10 p-0 border bg-white" src="{{$pokemon[0]["sprites"]["front_default"]}}" alt="Imagen de {{$pokemon[0]["name"]}}">
                 @else
                 <p class="col-12 my-2 text-center text-secondary">No hay imagen para este pokemon</p>
                 @endif
-            <br>
-            <a href="{{url('/'.$pokemon["name"])}}">Ir a este pokemon</a>
             </div>
-        @empty
-            <h6 class="col-10 mt-4 mx-4">No se encontraron resultados para tu busqueda</h6>
-        @endforelse
+            <div class="col-2 mt-4">   
+                <h5 class="mt-4">Habilidades</h5>
+                <ul>
+                    @foreach($pokemon[0]["abilities"] as $ability)
+                    <li class="text-left">
+                        {{ucwords(str_replace('-', ' ',$ability["ability"]["name"]))}}
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="col-2 mt-4">
+                <h5 class="mt-4">Movimientos</h5>
+                <ul>
+                    @foreach($pokemon[0]["moves"] as $move)
+                    <li class="">
+                        {{ucwords(str_replace('-', ' ',$move["move"]["name"]))}}
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="col-2 mt-4">
+                <h5 class="mt-4">Imagenes</h5>
+                <ul class="list-unstyled">
+                    @foreach($pokemon[0]["sprites"] as $sprite)
+                    @if(isset($sprite))
+                    <li class="m-0 p-0">
+                    <img src="{{$sprite}}" alt="">
+                    </li>
+                    @endif
+                    @endforeach
+                    @if(!isset($sprite))
+                    <p class="h6 mt-1 text-secondary">No hay más imagenes para este pokemon</p>
+                    @endif
+                </ul>
+            </div>
         </div>
        
         <footer>

@@ -13,7 +13,13 @@ class PokeController extends Controller
       return view('index');
    }
 
-
+   public function show($name){
+    $onePoke = new Result;
+    $pokemon = $onePoke->getOnePoke($name);
+    return view('show', [
+      'pokemon' => $pokemon,
+  ]);
+   }
 
    public function findPokemon(Request $request){
 
@@ -39,7 +45,7 @@ class PokeController extends Controller
       $resultsCalls = new Result;
       $somePoke = $resultsCalls->getResultsRequests($resultsArray);
       
-
+      
     return view('find', [
         'somePoke' => $somePoke,
     ]);

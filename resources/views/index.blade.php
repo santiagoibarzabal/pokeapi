@@ -35,7 +35,10 @@
                             <p class="text-xs" id="error"></p>
                     </div>
                    
-                    <input type="submit" id="submit" value="Buscar" class="col-3 btn btn-success">
+                    <div class="col-4 my-1">
+                        <input type="submit" id="submit" value="Buscar" class="btn btn-success">
+                    </div>
+                   
                     
                 </div>
                
@@ -44,7 +47,7 @@
             </form>
              
         </div>
-        
+       
        
         <footer>
             <div class="row border-top justify-content-between">
