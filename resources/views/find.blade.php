@@ -56,12 +56,14 @@
             <div class="col-2 my-4 mx-1 p-1 text-center">
                 <h5 class="text-center">{{ucwords(str_replace('-', ' ',$pokemon["name"]))}}</h5>
                 @if(isset($pokemon["sprites"]["front_default"]))
+                <a href="{{url('/'.$pokemon["name"])}}">
                 <img class="col-10 p-0 border bg-white" src="{{$pokemon["sprites"]["front_default"]}}" alt="Imagen de {{$pokemon["name"]}}">
+                </a>
                 @else
                 <p class="col-12 my-2 text-center text-secondary">No hay imagen para este pokemon</p>
                 @endif
             <br>
-            <a href="{{url('/'.$pokemon["name"])}}">Ir a este pokemon</a>
+            <a class="text-secondary" href="{{url('/'.$pokemon["name"])}}">Ir a este pokemon</a>
             </div>
         @empty
             <h6 class="col-10 mt-4 mx-4">No se encontraron resultados para tu busqueda</h6>
