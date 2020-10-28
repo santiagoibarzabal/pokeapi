@@ -84,7 +84,7 @@
                 <h5 class="mt-4">Imagenes</h5>
                 <ul class="list-unstyled">
                     @foreach($pokemon[0]["sprites"] as $sprite)
-                    @if(isset($sprite))
+                    @if(isset($sprite) && !is_array($sprite))
                     <li class="m-0 p-0">
                     <img src="{{$sprite}}" alt="">
                     </li>
